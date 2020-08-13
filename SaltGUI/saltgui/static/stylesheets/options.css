@@ -1,0 +1,13 @@
+#options-table input {
+  width: initial;
+  min-width: initial;
+}
+
+#options-table label {
+  margin-right: 20px;
+}
+
+table#options-table tr td {
+  white-space: pre-wrap;
+  vertical-align: top;
+}
