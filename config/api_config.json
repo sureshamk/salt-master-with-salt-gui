@@ -1,0 +1,37 @@
+{
+  "rest_cherrypy": {
+    "port": 8000,
+    "disable_ssl": true,
+    "app": "/srv/saltgui/index.html",
+    "static":"/srv/saltgui/static",
+    "static_path": "/static"
+  },
+  "external_auth": {
+    "pam": {
+      "saltuser": [
+        ".*",
+        "@runner",
+        "@wheel",
+        "@jobs"
+      ]
+    },
+    "file": {
+      "^filename": "/etc/salt_users.txt",
+      "saltuser": [
+        ".*",
+        "@runner",
+        "@wheel",
+        "@jobs"
+      ]
+    },
+    "sharedsecret": {
+      "salt": [
+        ".*",
+        "@wheel",
+        "@jobs",
+        "@runner"
+      ]
+    }
+  },
+  "sharedsecret": "supersecret"
+}

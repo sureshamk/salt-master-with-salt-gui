@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  saltmastergui:
+    build: './'
+    ports:
+      - '8007:8000'
+    volumes:
+      - ./config/api_config.json:/etc/salt/master.d/api.conf
+      - ./config/salt_users.txt:/etc/salt_users.txt
